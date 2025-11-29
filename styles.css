@@ -65,10 +65,25 @@ body {
     padding: 1rem 20px;
 }
 
-.nav-brand h1 {
-    font-size: 1.5rem;
-    color: var(--primary-color);
-    font-weight: 700;
+.nav-brand {
+    display: flex;
+    align-items: center;
+}
+
+.logo-link {
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+}
+
+.logo {
+    height: 50px;
+    width: auto;
+    transition: transform 0.3s ease;
+}
+
+.logo-link:hover .logo {
+    transform: scale(1.05);
 }
 
 .nav-center {
