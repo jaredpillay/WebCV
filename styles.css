@@ -79,11 +79,15 @@ body {
 .logo {
     height: 90px;
     width: auto;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, filter 0.3s ease;
 }
 
 .logo-link:hover .logo {
     transform: scale(1.05);
+}
+
+html.dark-theme .logo {
+    filter: brightness(0) invert(1);
 }
 
 .nav-center {
