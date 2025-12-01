@@ -69,14 +69,21 @@ document.querySelectorAll('.skill-card, .education-item, .timeline-item').forEac
 window.addEventListener('scroll', () => {
     let current = '';
     const sections = document.querySelectorAll('section');
+    const pageHeight = document.documentElement.scrollHeight;
+    const scrollPosition = window.innerHeight + window.pageYOffset;
     
-    sections.forEach(section => {
-        const sectionTop = section.offsetTop;
-        const sectionHeight = section.clientHeight;
-        if (pageYOffset >= sectionTop - 200) {
-            current = section.getAttribute('id');
-        }
-    });
+    // Check if we're at the bottom of the page
+    if (scrollPosition >= pageHeight - 100) {
+        current = 'contact';
+    } else {
+        sections.forEach(section => {
+            const sectionTop = section.offsetTop;
+            const sectionHeight = section.clientHeight;
+            if (pageYOffset >= sectionTop - 200) {
+                current = section.getAttribute('id');
+            }
+        });
+    }
 
     document.querySelectorAll('.nav-links a').forEach(link => {
         link.classList.remove('active');
@@ -85,6 +92,9 @@ window.addEventListener('scroll', () => {
         }
     });
 });
+
+// Trigger scroll event on page load to set initial active state
+window.dispatchEvent(new Event('scroll'));
 
 // Add active style
 const style = document.createElement('style');

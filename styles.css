@@ -541,7 +541,7 @@ html.dark-theme .logo {
 
 /* Footer */
 .footer {
-    background-color: var(--text-dark);
+    background-color: #1f2937;
     color: white;
     padding: 2rem 20px;
     text-align: center;
