@@ -1,6 +1,6 @@
 # Professional Portfolio/Resume Website
 
-A modern, responsive portfolio website built with HTML, CSS, and JavaScript. Similar to Ashvir Munesar's portfolio, this template features a clean, professional design with multiple sections to showcase your skills and experience.
+A modern, responsive portfolio website built with HTML, CSS, and JavaScript.This template features a clean, professional design with multiple sections to showcase your skills and experience.
 
 ## Features
 
